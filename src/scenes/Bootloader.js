@@ -11,7 +11,7 @@ class Bootloader extends Phaser.Scene{
     
     preload() {
         this.load.path = './assets/';
-        this.load.image(['huesos', 'calavera', 'tablero', 'drop']);
+        this.load.image(['huesos', 'calavera', 'tablero', 'drop', 'ganaste']);
         this.load.image("verde", "verde.jpg");
         this.load.image("fondo", "fondo.png");
         this.load.image("gato", "gato.png");
@@ -23,11 +23,61 @@ class Bootloader extends Phaser.Scene{
         this.x.setScale(0.20);
         this.input.setDraggable(this.x);
         this.x.setDepth(1);
+        this.x.setName("x");
+
+        this.x2 = this.add.image(1030, 300, "huesos").setInteractive();
+        this.x2.setScale(0.20);
+        this.input.setDraggable(this.x2);
+        this.x2.setDepth(1);
+        this.x2.setName("x");
+
+        this.x3 = this.add.image(1030, 300, "huesos").setInteractive();
+        this.x3.setScale(0.20);
+        this.input.setDraggable(this.x3);
+        this.x3.setDepth(1);
+        this.x3.setName("x");
+
+        this.x4 = this.add.image(1030, 300, "huesos").setInteractive();
+        this.x4.setScale(0.20);
+        this.input.setDraggable(this.x4);
+        this.x4.setDepth(1);
+        this.x4.setName("x");
+
+        this.x5 = this.add.image(1030, 300, "huesos").setInteractive();
+        this.x5.setScale(0.20);
+        this.input.setDraggable(this.x5);
+        this.x5.setDepth(1);
+        this.x5.setName("x");
 
         this.circle = this.add.image(300, 420, "calavera").setInteractive();
         this.circle.setScale(0.25);
         this.input.setDraggable(this.circle);
         this.circle.setDepth(1);
+        this.circle.setName("o");
+
+        this.circle2 = this.add.image(300, 420, "calavera").setInteractive();
+        this.circle2.setScale(0.25);
+        this.input.setDraggable(this.circle2);
+        this.circle2.setDepth(1);
+        this.circle2.setName("o");
+
+        this.circle3 = this.add.image(300, 420, "calavera").setInteractive();
+        this.circle3.setScale(0.25);
+        this.input.setDraggable(this.circle3);
+        this.circle3.setDepth(1);
+        this.circle3.setName("o");
+
+        this.circle4 = this.add.image(300, 420, "calavera").setInteractive();
+        this.circle4.setScale(0.25);
+        this.input.setDraggable(this.circle4);
+        this.circle4.setDepth(1);
+        this.circle4.setName("o");
+
+        this.circle5 = this.add.image(300, 420, "calavera").setInteractive();
+        this.circle5.setScale(0.25);
+        this.input.setDraggable(this.circle5);
+        this.circle5.setDepth(1);
+        this.circle5.setName("o");
 
         this.tablero = this.add.image(675, 375, "tablero").setInteractive();
         this.tablero.setScale(0.8);
@@ -42,55 +92,55 @@ class Bootloader extends Phaser.Scene{
         this.fondo.setScale(1.12);
         this.fondo.setDepth(0);
 
-        this.drop = this.add.image(535, 239.5, 'drop').setName("hola");
+        this.drop = this.add.image(535, 239.5, 'drop').setName("1");
         this.drop.setDepth(-1);
         this.drop.setScale(1.55);
         this.drop.setInteractive();
         this.drop.input.dropZone = true;
 
-        this.drop2 = this.add.image(675, 239.5, 'drop').setName("hola");
+        this.drop2 = this.add.image(675, 239.5, 'drop').setName("2");
         this.drop2.setDepth(-1);
         this.drop2.setScale(1.55);
         this.drop2.setInteractive();
         this.drop2.input.dropZone = true;
 
-        this.drop3 = this.add.image(815, 239.5, 'drop').setName("hola");
+        this.drop3 = this.add.image(815, 239.5, 'drop').setName("3");
         this.drop3.setDepth(-1);
         this.drop3.setScale(1.55);
         this.drop3.setInteractive();
         this.drop3.input.dropZone = true;
         
-        this.drop4 = this.add.image(535, 375, 'drop').setName("hola");
+        this.drop4 = this.add.image(535, 375, 'drop').setName("4");
         this.drop4.setDepth(-1);
         this.drop4.setScale(1.55);
         this.drop4.setInteractive();
         this.drop4.input.dropZone = true;
         
-        this.drop5 = this.add.image(675, 375, 'drop').setName("hola");
+        this.drop5 = this.add.image(675, 375, 'drop').setName("5");
         this.drop5.setDepth(-1);
         this.drop5.setScale(1.55);
         this.drop5.setInteractive();
         this.drop5.input.dropZone = true;
 
-        this.drop6 = this.add.image(815, 375, 'drop').setName("hola");
+        this.drop6 = this.add.image(815, 375, 'drop').setName("6");
         this.drop6.setDepth(-1);
         this.drop6.setScale(1.55);
         this.drop6.setInteractive();
         this.drop6.input.dropZone = true;
 
-        this.drop7 = this.add.image(535, 510, 'drop').setName("hola");
+        this.drop7 = this.add.image(535, 510, 'drop').setName("7");
         this.drop7.setDepth(-1);
         this.drop7.setScale(1.55);
         this.drop7.setInteractive();
         this.drop7.input.dropZone = true;
 
-        this.drop8 = this.add.image(675, 510, 'drop').setName("hola");
+        this.drop8 = this.add.image(675, 510, 'drop').setName("8");
         this.drop8.setDepth(-1);
         this.drop8.setScale(1.55);
         this.drop8.setInteractive();
         this.drop8.input.dropZone = true;
 
-        this.drop9 = this.add.image(815, 510, 'drop').setName("hola");
+        this.drop9 = this.add.image(815, 510, 'drop').setName("9");
         this.drop9.setDepth(-1);
         this.drop9.setScale(1.55);
         this.drop9.setInteractive();
@@ -104,7 +154,25 @@ class Bootloader extends Phaser.Scene{
         this.reiniciar.setDepth(2);
         this.reiniciar.setScale(0.2);
         this.reiniciar.setInteractive();
-        
+
+        this.ganaste = this.add.image(600, 340, 'ganaste').setName("ganaste");
+        this.ganaste.setDepth(2);
+        this.ganaste.setScale(0.85);
+        this.ganaste.setAlpha(0)
+
+        let movesX = []
+        let movesO = []
+        let posibilities = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+        [1, 5, 9],
+        [3, 5, 7],
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9]]
+        let imagenesCal = [this.circle, this.circle2, this.circle3, this.circle4, this.circle5]
+        let imagenesHue = [this.x, this.x2, this.x3, this.x4, this.x5]
+        let timedEvent;
 
 
         const eventos = Phaser.Input.Events;
@@ -127,15 +195,65 @@ class Bootloader extends Phaser.Scene{
 
         this.input.on(eventos.DRAG_ENTER, (pointer, obj, dropzone) => {
             dropzone.setTint(0xabdcd2);
-            console.log(dropzone.name)
+            //console.log(dropzone.name)
         });
         this.input.on(eventos.DRAG_LEAVE, (pointer, obj, dropzone) => {
             dropzone.clearTint();
         });
 
+        let reiniciarJ = () => {
+            this.scene.restart();
+        }
+
         this.input.on(eventos.DROP, (pointer, obj, dropzone) => {
             obj.x = dropzone.x;
             obj.y = dropzone.y;
+            //console.log("entre al cuado")
+            //console.log(dropzone.name)
+            //console.log(obj.name)
+
+            // CUANDO SE SUELTA UNA CALAVERA 
+            if(obj.name == "o") {
+                movesO.push(parseInt(dropzone.name))
+                //console.log(movesO)
+                const verificar = (valor) => movesO.includes(valor);
+                for (let mov of posibilities) {
+                    if (mov.every(verificar)) {
+                        console.log("GANASTE CALAVERA")
+                        this.ganaste.setAlpha(1)
+                        timedEvent = this.time.delayedCall(4000, reiniciarJ, [], this);
+                        //this.scene.restart();
+                    }
+                }
+                for (let img of imagenesCal) {
+                    img.input.draggable = false
+                }
+                for (let img of imagenesHue) {
+                    img.input.draggable = true
+                }
+
+            }
+            // CUANDO SE SUELTAN HUESOS
+            else if (obj.name == "x") {
+                movesX.push(parseInt(dropzone.name))
+                //console.log(movesX)
+                const verificar2 = (valor) => movesX.includes(valor);
+                for (let mov of posibilities) {
+                    if (mov.every(verificar2)) {
+                        console.log("GANASTE HUESOS")
+                        this.ganaste.setAlpha(1)
+                        timedEvent = this.time.delayedCall(4000, reiniciarJ, [], this);
+                        //this.scene.restart();
+                    }
+                }
+                for (let img of imagenesCal) {
+                    img.input.draggable = true
+                }
+                for (let img of imagenesHue) {
+                    img.input.draggable = false
+                }
+            }
+
         });
 
         this.reiniciar.on(eventos.POINTER_OVER, function() {
@@ -144,8 +262,10 @@ class Bootloader extends Phaser.Scene{
         this.reiniciar.on(eventos.POINTER_OUT, function() {
             this.setScale(0.2);
         });
+        this.reiniciar.on(eventos.POINTER_DOWN, function() {
+            this.scene.restart();
+        }, this);
 
-        
     }
 
     update(time, delta) {
